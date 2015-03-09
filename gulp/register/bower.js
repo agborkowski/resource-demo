@@ -7,7 +7,6 @@ gulp.task('bower', function (done) {
     runSequence(
         'bower-get',
         'bower-copy',
-        'clean-bower',
         done
     );
 });

@@ -7,6 +7,7 @@ test/coverage
 
 # Dependency directory
 node_modules
+bower_components
 
 # System
 .DS_Store
@@ -16,3 +17,4 @@ node_modules
 
 # Build temporary files
 .sass-cache
+.tmp

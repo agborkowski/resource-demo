@@ -10,7 +10,7 @@ requireDir('./gulp/register/');
 /**
  * simply compile .sass => .css and .ts => .js
  */
-gulp.task('build', ['sass', 'ts']);
+//gulp.task('build', ['copy-index', 'sass', 'ts', 'partials-to-js']);
 
 /**
  * run server, watch for changes and live reload
@@ -35,25 +35,25 @@ gulp.task('dev', function (done) {
 /**
  * download bower dependencies, uglify and concat some of them and move some files around (build)
  */
-gulp.task('prepare', function (done) {
-    runSequence(
-        'clean',
-        ['bower', 'ts', 'sass'],
-        'karma-ci',
-        done
-    );
-});
+//gulp.task('prepare', function (done) {
+//    runSequence(
+//        'clean',
+//        ['bower', 'ts', 'sass'],
+//        'karma-ci',
+//        done
+//    );
+//});
 
 /**
  * task for jenkins
  */
-gulp.task('ci', ['bower'], function(done) {
-    runSequence(
-        ['bower', 'ts', 'sass-test'],
-        'karma-ci',
-        done
-    );
-});
+//gulp.task('ci', ['bower'], function(done) {
+//    runSequence(
+//        ['bower', 'ts', 'sass-test'],
+//        'karma-ci',
+//        done
+//    );
+//});
 
 /**
  * emulate jenkins
