@@ -7,6 +7,7 @@ gulp.task('build-prepare', function (done) {
     runSequence(
         ['copy', 'ts'],
         ['inject-partials', 'inject-sass'],
+        'inject-scripts',
         done
     )
 });
