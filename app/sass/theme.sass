@@ -1,0 +1,681 @@
+$app-v: vGENERATED_APP_VERSION
+
+// control vars
+$experimental-support-for-svg: true
+
+// dimensions
+$right-side-view-width: 360px
+$right-side-view-pad-left: 17px
+$right-side-view-pad-right: 31px
+
+// colors
+$b: #000
+$w: #fff
+$common-darker-grey: #2d3538
+$common-dark-grey: #4f595d
+$common-semi-light-grey: #bccbd3
+$common-almost-light-grey: #ccd5dc
+$common-light-grey: #e4eaed
+$common-light-violet-grey: #f7f7ff
+$common-dark-green: #15a86b
+$common-mask-grey: #707C81
+
+$text-black: #2e3639
+$text-semi-black: #283538
+$text-grey: #727e83
+$text-light-grey: #707C81
+$text-very-light-grey: #aaa
+$text-green: #82b868
+
+$success-ultra-light: #e4fbe8
+$success-light: #b2f5be
+$success-mid: #64da9c
+$success-semi-dark: #4cbe8c
+$success-dark: #006937
+
+// other
+$input-text-dark-grey: #4e595d
+
+$dark-grey: $common-darker-grey
+$another-dark-grey: $common-dark-grey
+
+$bg-border-grey: #cdd5dc
+
+$bg-light-green: #a1c98c
+
+$peter-hatch-link-blue-v1: #23a7dd
+$peter-hatch-link-blue-v2: #1c91e9
+$peter-hatch-link-blue-v3: #39f
+$peter-hatch-link-blue-v4: #3fa9f5
+
+$link: $peter-hatch-link-blue-v1
+$link-blue: $peter-hatch-link-blue-v3 // $peter-hatch-link-blue-v2
+$link-grey: #717d81
+
+$error: #db3f27
+$error-flickering-pink: #ff545a
+
+$azure-light: #4fbbd0
+$azure-medium: #349eb1
+
+$nav-dark: $text-black
+$nav-light: #515b5e
+$nav-red: #d1422e
+
+$aside-bg: #fbfbfb
+$light-shade: #f6f6f6
+
+$button-green: #82b868
+$button-new-green: #64db9d
+$button-new-green-bottom: #39ad82
+$button-blue: #3af
+$button-disabled-grey: #cdd3da
+$button-border-bottom: #349eb1
+$button-red: #e95d41
+
+$table-border-top: $button-disabled-grey
+$table-border-bottom: #f2f4f6
+$table-header-color: #8b909d
+$table-body-color: $another-dark-grey
+$table-column-border-top: #e6eaed
+$table-info-color: $text-light-grey
+
+$tab-border-hover: #bdccd4
+$tab-border-active: $b
+$tab-font-color: $table-info-color
+
+$tag-border: #e6e9ed
+$tag-shadow: #dbdbdb
+
+$tooltip-border: $button-disabled-grey
+$tooltip-secondary-text: $table-info-color
+
+$form-label: #50bcd0
+
+$choice-page-blue: #4ba8fa
+$choice-page-grey: #6f7b80
+
+$progress-txt: #8b909d
+$progress-grey: #e0e0e0
+$progress-light-grey: #b6b9c3
+$progress-dark-grey: #9ca0ad
+
+$stakeholders-light-blue: #3399ff
+$stakeholders-expand-content-blue: $peter-hatch-link-blue-v4
+$stakeholders-expand-content-grey: #e6f1fc
+$stakeholders-creamy: $success-ultra-light
+$stakeholders-apple-candy: $common-dark-green
+$stakeholders-dirt: #52798e
+$stakeholders-dirty-white: #eff7f5
+
+
+$text-field-border: #e4e5e9
+$text-field-disabled-bg: #eee
+$text-field-disabled-color: #aaa
+$text-field-error-bg: #ffebe8
+
+$tags-light-navy: #edf8f6
+
+$score-dark-green: #2cb58d
+$score-green: #79d180
+$score-yellow: #ffce46
+$score-orange: #fda915
+$score-red: #f05d46
+
+$score-progressbar-grey: #e5ebee
+$score-progressbar-very-light-grey: #f3f6f7
+
+$score-userdata-bkg: #f1f1f1
+$score-add-score-bkg: $dark-grey
+$score-add-score-color: #ebebe5
+$score-button-color: #818285
+$score-button-color-selected: #8cc63e
+$score-toggle-bkg: #6f7072
+$score-toggle-arrow-color: $w
+$score-add-score-additional-bkg: $score-userdata-bkg
+$score-review-border-color: #dbdcde
+$score-interview-count-color: #404040
+
+$score-sug-green-light: #8eca8a
+$score-sug-orange-light: #fddf52
+$score-sug-red-light: #fb9e80
+
+$score-reviews-header-bkg: $score-add-score-bkg
+$score-reviews-list-border: #d3d3d3
+
+$score-1page-filters-gray-light: #bcccd4
+$score-1page-filters-gray-dark: #abbec8
+
+
+$scoring-ultralightgrey: #f8f8f9
+$scoring-table-border: #f1f1f3
+$scoring-lightgrey: #e5e9ed
+$scoring-mid-lightgrey: #b0bcc7
+$scoring-semidarkgrey: #8b8f9e
+$scoring-darkgrey: #6f7b81
+
+$scoring-analitycs-button-dirty-white: #f8fafb
+
+$scoring-navigationheader-grey: $table-info-color
+$scoring-navigationheader-lightgrey: #dbdbdb
+$scoring-navigationheader-lightgrey-border:$scoring-lightgrey
+$scoring-navigationheader-darkgrey: #888
+$scoring-navigationheader-black: $nav-dark
+$scoring-navigationheader-font: $w
+$scoring-navigationheader-background: #f7f9fa
+
+$scoring-table-header: $text-black  //$progress-txt
+$scoring-ascdesc-triangle: $scoring-table-header
+$scoring-actionbutton-bkg: $link-blue
+
+$no-candidates-aquamarine-dark: $common-dark-green
+$no-candidates-aquamarine-light: #aff4bd
+$no-candidates-aquamarine-middle: #8be8ae
+$no-candidates-aquamarine: $success-mid
+$no-candidates-grey: #8b8f9e
+
+$progress-board-semi-mid-grey: #707c80
+$progress-board-mid-grey: $scoring-semidarkgrey
+$progress-lightgrey-border: $scoring-lightgrey
+$progress-board-border: $scoring-table-border
+
+$progress-board-tabs-dark-grey: $text-semi-black
+$progress-board-tabs-mid-grey: $progress-board-mid-grey
+
+$progboard-green-additional: #8dd89d
+$progboard-green-start: #5fd164
+$progboard-green-end: #62d367
+
+$progboard-yellow-additional: #fbeca3
+$progboard-yellow-start: #ffe747
+$progboard-yellow-end: #ffcf47
+
+$progboard-orange-additional: #fec15e
+$progboard-orange-start: #fec12f
+$progboard-orange-end: #feaa17
+
+$progboard-red-additional: #f7b29d
+$progboard-red-start: #f0634e
+$progboard-red-end: #f16551
+
+$new-challenge-input-text: $table-info-color
+$new-challenge-label-text: $nav-light
+$publish-challenge-decline-button: #ced5db
+
+$challenge-info-bkg-hover: #f2f2f2
+
+$content-count-text: #7a7b77
+$content-empty-grey: #8b8f9e
+$content-required-red: #e35e46
+
+$content-editor-tabs-text: $content-empty-grey
+$content-editor-border: $table-column-border-top
+$content-editor-charcounter-bg: $text-black
+$content-editor-charcounter-valid: #80b768
+$content-editor-charcounter-invalid: $error
+
+$overview-deadline-txt: #418d7e
+
+$fake-select-hover-bg: $table-column-border-top
+
+$email-dialog-border: $table-border-top
+$email-dialog-footer-bg: $text-black
+$email-dialog-footer-bg-v2: #f2f2f2
+$email-dialog-footer-text: #b5e2ed
+$email-dialog-footer-text-v2: #939598
+$email-dialog-deadline: $content-editor-charcounter-invalid
+$email-dialog-deadline-date: #F47621
+$email-dialog-message-border: $form-label
+$email-dialog-message-border-color: #86ccff
+$email-dialog-message-text: #3399ff
+
+$dialog-remark-message: #787C7F
+
+$add-candidate-border: #bbc2c6
+$add-candidate-border-inner: #e4e9ec
+$add-candidate-line: #ced4db
+$add-candidate-active-tab: $bg-light-green
+
+$template-saveas-bordercolor: $button-disabled-grey
+$template-saveas-tagslist-bkg: $template-saveas-bordercolor
+$template-dropdown-labelcolor: #456134
+$template-trianglecolor: #6b9852
+$template-trianglecolor-darker: #56665e
+$template-taglist-color: $tab-font-color
+$template-taglist-bkg: $bg-border-grey
+
+$avatars-list-border: #b3b3b3
+
+// fonts
+$helvetica: "Helvetica", "Arial", sans-serif
+$georgia: "Georgia", "Times", "Times New Roman", serif
+$arial: "Arial", "Helvetica", sans-serif
+$verdana: "Verdana", "Geneva", sans-serif
+$proxima: "proxima-nova", $helvetica
+$proxima-cond: "proxima-nova-condensed", $helvetica
+$alt-gothic-no2: "alternate-gothic-no-2-d", $helvetica
+
+// social
+$button-social-font-color: #333
+$button-social-border: #bfbfc2
+$linkedin-background: #1e91bc
+$google-list-background: #f5f7fb
+
+// analytics
+$anal-dark-grey: $another-dark-grey
+$anal-bit-darker-grey: $dark-grey
+$anal-darker-grey: $text-semi-black
+$anal-almost-black: #21201d
+
+$anal-big-cloud-bg: #1e2c2f
+$anal-big-cloud-blue: #91c7ff
+
+$anal-summary-ac-bg: #f4f4f6
+$anal-summary-border: #e2e5ed
+$anal-summary-lighter-border: #ebf0f2
+
+$anal-sentiment-positive: #69ce6e
+$anal-sentiment-negative: #f15d47
+
+$anal-header-bkg: #f8f9fb
+$anal-grey-light: #d6dfe4
+$anal-read-more: #3399ff
+
+$anal-summary-headers: #8b909e
+
+$pie-submitted: #69ce6e
+$pie-writing: #abe4ae
+$pie-reading: #ef8430
+$pie-notloggedin: #e6eaee
+$pie-label:#2c3438
+
+$no-data-text: $common-almost-light-grey
+$anal-limiter-bkg: $no-data-text
+$anal-limiter-arrow: #49585d
+
+$wordcloud-color1: #8a8f9d
+$wordcloud-color2: $dark-grey
+$wordcloud-color3: #3398ff
+$wordcloud-color4: #3398ff
+
+$company-mentions-bar: $anal-darker-grey
+$company-mentions-bar-border: #798183
+$company-mentions-bar-number: $text-light-grey
+
+$module-title-color: #273438
+$white-pie-chart-border: #d0d7de
+
+$blue-button-analytics: #3398ff
+$blue-button-analytics-border: #c2e0ff
+$blue-button-analytics-text-shadow: #bbddff
+$blue-button-analytics-box-shadow: #ebf5ff
+$blue-button-analytics-bg: #d2e9ff
+$blue-button-border-top: #c2e0ff
+$blue-button-border-bottom: #ebf5ff
+
+$scoreboard-button-border: #409eff
+$scoreboard-button-border-shadow: #cde6ff
+
+$analytics-avatar-bg: #edf0f2
+
+// challenge print
+$footer-text-color: #525c5e
+
+
+// picker
+$picker-hover-bg: #eee
+$picker-past-color: #ddd
+$picker-other-color: #999
+
+
+$picker-active-bg-start: #08C
+$picker-active-bg-end: #04C
+
+// billing
+$billing-rusty-white: #f8f8f8
+$billing-light-grey: #e8e8e8
+$billing-semi-lighter-grey: #d1d9df
+$billing-semi-light-grey: #a9abb6
+$billing-lighter-green: #7ac943
+$billing-green: #59bb15
+$billing-input-border: #e0e5e9
+$billing-subscribe-text: #707b80
+$billing-subscribe-button: $peter-hatch-link-blue-v4
+$billing-confirmation-border-table: #dde2e6
+$billing-confirmation-table-text: $input-text-dark-grey
+$billing-profile-black: #21201d
+$billing-profile-dark-grey: $another-dark-grey
+$billing-placeholders: #a7b5c2
+$billing-green-info-bg: #e4fbe9
+$billing-green-info-border: #b3f6be
+$billing-green-info-text: #009245
+$billing-congratulation-headline: #2c3438
+$billing-small-business-headline: #ffa551
+$billing-small-business-content: $common-darker-grey
+$billing-small-business-choose-pricing-headline: #2c3438
+$billing-footer-email: #59b4f6
+$billing-footer-email-strong: #222222
+$billing-footer-email-confirmation: #8b8e9e
+$billing-footer-invoice: #64d99b
+$billing-invoice-table-shadow: #f4f4f4
+$billing-invoice-table-td: $input-text-dark-grey
+$billing-invoice-button-shadow: #abdafb
+$billing-start-headline: #2c3438
+$billing-green-confirm: #63db9d
+$billing-error-red: #da3f27
+$billing-error-bg: #fdf2ef
+
+// fake ui colors
+$dark-select-black: #3b474b
+$dark-select-grey: $common-dark-grey
+$dark-select-white: $common-almost-light-grey
+$green-select-dark: #34ab7d
+$green-select-light: #53b892
+
+// custom checkbox
+$op-checkbox-indicator: $common-dark-green
+$op-checkbox-off-bg-bottom: #f3f5f7
+$op-checkbox-off-bg-top: #e5ebee
+$op-checkbox-off-border: $common-light-grey
+$op-checkbox-on-bg: $success-light
+$op-checkbox-on-border: #8ee2b3
+
+// email dialog
+$email-action-dialog-subtitle-grey: $another-dark-grey
+$email-action-dialog-dark-grey: #2c3538
+$email-action-dialog-mid-dark-grey: #828282
+$email-action-dialog-mid-light-grey: #b4b5be
+$email-action-dialog-form-bg: #ebedf0
+$email-action-dialog-light-grey: #d0d9e3
+$email-action-dialog-dirty-white: #f1f3f5
+$email-action-button-green-border: #6edda3
+$email-action-button-green-text: #53b892
+$email-action-dialog-red: #ff1d24
+
+// scoreboard status
+$scoreboard-invitation-default-dot-status: #bdccd4
+$scoreboard-invitation-hired-status: $common-dark-green
+$scoreboard-invitation-accepted-status: $success-mid
+$scoreboard-invitation-withdrawn-status: #bdccd4
+$scoreboard-invitation-rejected-status: #f0bcb9
+$scoreboard-invitation-created-status: #26aae0
+$scoreboard-dropdown-border: $common-light-grey
+$scoreboard-dropdown-border-shadow: #f3f3f3
+$scoreboard-button-hover-color: #e1f7ff
+
+// challenge invite
+$challenge-invite-candidates-headline-enter-name: #52798d
+$challenge-invite-candidates-add-more-entries: $common-semi-light-grey
+$challenge-invite-candidates-btn-border: #9ee8c1
+$challenge-invite-candidates-btn-box-shadow: #c5f1da
+$challenge-invite-candidates-btn-text-shadow: #c1e8d8
+
+$challenge-invite-now-gradient-top: #b2f6be
+$challenge-invite-now-gradient-bottom: #65db9d
+
+$challenge-invite-green-button-text: #14a76b
+$challenge-invite-green-button-hover-text: #00905e
+
+// invite candidates menu
+
+$invite-candidates-default-headline: #9b9fac
+$invite-candidates-hover-headline: #52b892
+$invite-candidates-hover-background: #f6f7f9
+$invite-candidates-left-arrow-background: #314148
+$invite-candidates-border-grey: $common-light-grey
+$invite-candidates-button-border: #fcfcfd
+$invite-candidates-button-bg-hover: #f9fafc
+$invite-candidates-from-email-header: #2c3438
+$invite-candidates-from-email-table-header: #626c70
+$invite-candidates-from-email-table-border: #d5dce2
+$invite-candidates-from-email-input: #2c3438
+$invite-candidates-from-email-input-border-active: #9bd2f3
+$invite-candidates-from-email-button: #9ca0ad
+$invite-candidates-from-email-date-picker-border: #6abcf5
+
+$invite-candidates-from-email-input-text: $input-text-dark-grey
+$invite-candidates-from-email-hr-bg: #eeefef
+$invite-candidates-disabled-button: #eeeeee
+$invite-candidates-share-link-header-content: #8b8e9e
+$invite-candidates-share-link-href-bg: #dff1ff
+$invite-candidates-share-link-checkbox-bg: #f5f7f8
+$invite-candidates-share-link-checkbox-border: #e6ebee
+$invite-candidates-share-link-checkbox-before: #2fccff
+$invite-candidates-share-link-checkbox-inner-after: #999999
+$invite-candidates-share-link-checkbox-bg-top-gradient: #eaeff1
+$invite-candidates-share-link-checkbox-bg-bottom-gradient: #f9fafb
+$invite-candidates-share-link-checkbox-on-label: $challenge-invite-green-button-text
+$invite-candidates-share-link-checkbox-disabled: #bbcbd2
+$invite-candidates-share-link-history-toggle-btn-content: #88c9f8
+$invite-candidates-share-link-clipboard-border: #e2e6ea
+$invite-candidates-share-link-clipboard-border-shadow: #ebeef1
+$invite-candidates-share-link-continue-btn-bg: $success-light
+$invite-candidates-share-link-continue-btn-border: #ecfdef
+//$invite-candidates-share-link-cadidates-writing-time-input: #2c3438
+$invite-candidates-share-link-cadidates-writing-label-bg-top: #abaeb9
+$invite-candidates-share-link-cadidates-writing-label-bg-bottom: #8b8f9e
+$invite-candidates-share-link-cadidates-writing-label-box-shadow: #babcc5
+$invite-candidates-share-link-cadidates-writing-input-box-shadow: #b9bcc5
+$invite-candidates-share-link-cadidates-writing-input-generate-top-bg: #b2f6bf
+$invite-candidates-share-link-cadidates-enabled: #8b8e9e
+$invite-candidates-share-link-cadidates-disabled: #bfbfc6
+$invite-candidates-share-link-cadidates-disabled-checkbox: #8b8f9e
+$invite-candidates-share-link-cadidates-date: $input-text-dark-grey
+$invite-candidates-share-link-cadidates-edit-url-deadline: #3fa9f4
+$invite-candidates-share-link-twitter: #00abf0
+$invite-candidates-share-link-linkedin: #007fb4
+$invite-candidates-share-link-facebook: #39579b
+$invite-candidates-share-created-caption: #8b8e9e
+$invite-candidates-share-disable: #bfbfc6
+$invite-candidates-share-expire-red: #ff1d25
+$invite-candidates-share-expire-grey: $input-text-dark-grey
+$invite-candidates-share-expire-light-grey: #8b8e9e
+$invite-candidates-linkedin-btn: #007ab6
+$invite-candidates-share-link-yt-link: #3fa9f4
+$invite-candidates-share-link-yt-top-border: #f2f5f6
+
+//csv progress upload dialog
+$csv-progress-shallow-grey: $common-light-grey
+$csv-progress-winter-morning-grey: #839fae
+$csv-progress-dirty-snow-grey: $common-semi-light-grey
+$csv-progress-campfire-red: #ff1d25
+$csv-progress-rock-grey: $common-dark-grey
+$csv-progress-sky-blue: $peter-hatch-link-blue-v4
+$csv-progress-fresh-green: $success-mid
+
+//help tooltip
+$help-tooltip-grey-bg: $common-semi-light-grey
+$help-tooltip-light-green: $success-ultra-light
+$help-tooltip-semi-green: #a4eac2
+$help-tooltip-green: $success-mid
+$help-tooltip-dark-green: #3e8d7e
+
+// basic pagination
+$pagination-text-grey: #91aab7
+$pagination-text-black: $common-darker-grey
+$pagination-text-blue: $peter-hatch-link-blue-v4
+$pagination-highlight: $common-light-grey
+
+// footer
+$global-footer-text: #9aaab8
+$global-footer-hover: $common-light-grey
+$global-footer-bg: $common-dark-grey
+
+//nice share dialog
+$nice-share-dialog-confirm-button: $peter-hatch-link-blue-v4
+$nice-share-dialog-decline-button: #fff1f2
+$nice-share-dialog-decline-text: #ff1d25
+$nice-share-dialog-question: #8b8f9e
+$nice-share-dialog-remark: #a2a5b1
+
+//change deadline dialog
+$change-deadline-tooltip-blue: #40a9f5
+$change-deadline-tooltip-light-blue: #94d0f7
+
+//group context challenge list
+$group-list-cozy-grey: #8b8f9e
+$group-list-amazing-skyblue: $peter-hatch-link-blue-v4
+$group-list-dollarlike-green: $common-dark-green
+$group-list-mould-grey: $common-light-grey
+$group-list-shadow: #f9f9fd
+$group-list-saladgreen: #49d48b
+$group-list-policeman-blue: #52798e
+$group-list-blackhole-sun: $common-darker-grey
+$group-list-antfood-grey: #a6bac5
+$group-list-sunless-morning: #f5f7f8
+$group-list-mushroom-grey: #bdccd4
+$group-list-violet: $common-light-violet-grey
+$group-list-easy-grey: #839fae
+
+//challenge list tabs
+$wolfy-grey-light: $common-semi-light-grey
+$wolfy-grey: #d2d9dd
+$fifth-shade-of-grey: $common-light-grey
+$nearly-black: $common-dark-grey
+
+//new-challenge help-guide
+$peaceful-grassgreen: $common-dark-green
+$saladgreen: $success-mid
+$mollusc-like-grey: #52798e
+$blackhole-sun: $common-darker-grey
+$grey-day: $common-semi-light-grey
+$grey-sun: $common-light-grey
+
+//challenge header
+$header-nav-default: #839fae
+$header-nav-active: #2d373c
+$header-nav-active-top: #555b5d
+
+$challenge-header-border: #e9eef0
+$challenge-header-box-shadow: #f5f6f7
+
+//pending candidates
+$pending-black: $common-darker-grey
+$pending-shallow-grey: #e8ecef
+$pending-heavy-grey: #828e92
+$pending-salad-green: #64db9d
+$pending-mint-green: #b3f6bf
+$pending-fur-grey: #d5dce2
+$pending-sky-blue: #3399ff
+$pending-skyline-blue: #3da7f5
+$pending-falling-sky-blue: #1780f2
+$pending-mana-potion-blue: #3dabff
+$pending-rock-grey: $common-semi-light-grey
+$pending-evening-grey: $common-dark-grey
+$pending-late-sky-violet: $common-light-violet-grey
+$pending-white-grey: #fcfdfd
+$pending-gandalf-grey: #839fae
+$csv-upload-blue-container: #def9fc
+$csv-upload-info-container: #f6fef7
+
+// slider
+$slider-grey-matter: #212a2d
+$slider-grey-mass: #1f292c
+$slider-grey-muss: #c1c9cf
+$slider-grey-rock: #bec9d2
+$slider-flaming-lasso: #f14c47
+$slider-orange-juice: #fea116
+$slider-sunbeam: #ffc447
+$slider-dollar: #51c35a
+$slider-cashflow: #2caa8d
+
+// proposal snippets
+$snippet-show-bg: #ffff99
+$snippet-selection-bg: darken($snippet-show-bg, 8%)
+$snippet-text-color: #6e6d6e
+$add-snippet-button-color: #2e3638
+$add-snippet-button-shadow: #333
+$scoring-one-page-score-headline: #ffce46
+$scoring-one-page-headline: #2b3438
+$score-rate: #68cd6d
+$score-picker-bg: #293538
+$score-picer-yes-or-no: #79d17f
+$score-form-border: #bcc0c1
+$score-form-list-text: #3f3f38
+$score-textarea-border: #e7e7e8
+$score-summary-edit-blue: #3399ff
+$score-error-red: #db3f27
+
+// slider color
+$score-slider-excellent-top: #2cb48d
+$score-slider-excellent-bottom: #2c9f8d
+
+$score-slider-good-top: #77d07e
+$score-slider-good-bottom: #3ebd48
+
+$score-slider-satisfactory-top: #ffcd47
+$score-slider-satisfactory-bottom: #ffbe47
+
+$score-slider-below-average-top: #fea816
+$score-slider-below-average-bottom: #fe9616
+
+$score-slider-poor-top: #f15c47
+$score-slider-poor-bottom: #f15c47
+
+$score-slider-default-top: #040e11
+$score-slider-default-bottom:#252d30
+
+// challenge list
+$challenge-list-actions-hover-border: #a2d5fa
+$challenge-list-actions-hover-border-bottom: #daeefd
+$challenge-list-search-bg: #f5f7f8
+$challenge-list-search-border: #ecf1f3
+
+//
+// challenge invitations boards
+//
+
+$challenge-boards-bulk-action: $peter-hatch-link-blue-v4
+$challenge-boards-bulk-action-bg: #f0f8fe
+$challenge-boards-bulk-action-border: #c4e4fc
+
+$challenge-boards-source-default-bg: $common-light-grey
+$challenge-boards-source-default-text: #92abb8
+
+// dropdown light
+$dropdown-light-border: #e7ecef
+$dropdown-light-bg: $w
+
+// scoreboard assign status dropdown
+$scoreboard-set-status-border: $dropdown-light-border
+$scoreboard-set-status-action-text: #839fae
+$scoreboard-set-status-action-text-muted: $common-semi-light-grey
+$scoreboard-set-status-action-positive-bullet: $success-mid
+$scoreboard-set-status-action-negative-bullet: #f05d47
+
+// challenge notification settings
+$challenge-noty-settings-close: $common-semi-light-grey
+$challenge-noty-settings-divider: $dropdown-light-border
+$challenge-noty-settings-header: $common-dark-grey
+$challenge-noty-settings-text: $common-darker-grey
+$challenge-noty-settings-radio-passive-bg: $common-light-grey
+$challenge-noty-settings-radio-passive-border: $common-almost-light-grey
+$challenge-noty-settings-radio-active-bg: $success-light
+$challenge-noty-settings-radio-active-border: $success-mid
+
+// global notifications
+$notifications-mask-top: $common-mask-grey
+$notifications-mask-bottom: $w
+$notifications-success-bg: $success-light
+$notifications-success-border: $success-mid
+$notifications-success-text: $success-dark
+
+// paginated list - all selection manager
+$all-selected-bg: $success-ultra-light
+$all-selected-text: $success-semi-dark
+$all-selected-border: $success-light
+
+//proposal-templates-dialog
+$proposal-template-sea-blue: #6dbcf6
+$proposal-template-sky-blue: #a1d5fa
+$proposal-template-black: $common-darker-grey
+$proposal-template-snow-white: #f7f7ff
+$proposal-template-snowy-green: $success-mid
+$proposal-template-border-gray: #ebeff1
+$proposal-template-gun-powder: $common-dark-grey
+
+$proposal-template-preview-grey: #4f585c
+$proposal-template-preview-lazy-black: #2e3638
+$proposal-template-preview-black: #2f3738
+$proposal-template-preview-grunt: #8b8f9e
+$proposal-template-preview-layer: #727a7d
