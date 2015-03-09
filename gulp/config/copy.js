@@ -13,19 +13,6 @@ gulp.task('copy-favicon', function () {
     return gulp.src('src/favicon.ico').pipe($.copy('.tmp/', {prefix: 1}));
 });
 
-gulp.task('partials-to-js', function () {
-    return gulp.src(['src/**/*.html', '!src/index.html'])
-        .pipe($.minifyHtml({
-            empty: true,
-            spare: true,
-            quotes: true
-        }))
-        .pipe($.angularTemplatecache('template-cache.js', {
-            module: 'app'
-        }))
-        .pipe(gulp.dest('.tmp/inject/'));
-});
-
 gulp.task('bower-copy', function() {
     return gulp.src($.mainBowerFiles({includeDev: true}), {
         base: 'bower_components'

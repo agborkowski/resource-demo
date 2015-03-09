@@ -13,10 +13,10 @@
     "angular-mocks": "1.2.28"
   },
   "overrides": {
-    "angular": {"main": ["*.js", "*.map"]},
-    "angular-animate": {"main": ["*.js", "*.map"]},
+    "angular": {"main": ["angular.js"]},
+    "angular-animate": {"main": ["angular-animate.js"]},
     "angular-mocks": {"main": ["*.js"]},
-    "angular-resource": {"main": ["*.js", "*.map"]},
-    "tri-angular-async": {"main": ["dist/**/*.{js,map}"]}
+    "angular-resource": {"main": ["angular-resource.js"]},
+    "tri-angular-async": {"main": ["dist/tri-angular-async.js"]}
   }
 }
