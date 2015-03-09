@@ -7,7 +7,7 @@ var $ = require('gulp-load-plugins')({
 });
 
 var sassPathReplacer = function (path) {
-    return '@import "' + path.replace('.tmp/sass/', '../') + '";';
+    return '@import \'' + path.replace('.tmp/sass/', '../') + '\'';
 };
 
 gulp.task('inject-sass', function () {

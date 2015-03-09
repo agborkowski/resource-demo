@@ -24,7 +24,7 @@ gulp.task('copy-sass-modules', function () {
 });
 
 gulp.task('copy-sass-assets', function () {
-    return gulp.src('src/assets/**/*.sass').pipe($.copy('.tmp/sass/base/', {prefix: 3}));
+    return gulp.src('src/assets/**/*.{sass,scss}').pipe($.copy('.tmp/sass/base/', {prefix: 3}));
 });
 
 gulp.task('copy-sass-bourbon', function () {
