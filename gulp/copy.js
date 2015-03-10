@@ -30,3 +30,7 @@ gulp.task('copy-sass-assets', function () {
 gulp.task('copy-sass-bourbon', function () {
     return gulp.src('bower_components/bourbon/dist/**/*.scss').pipe($.copy('.tmp/sass/bourbon/', {prefix: 3}));
 });
+
+gulp.task('copy-sass', ['copy-sass-modules', 'copy-sass-assets', 'copy-sass-bourbon']);
+
+gulp.task('copy', ['bower-copy', 'copy-favicon', 'copy-index', 'copy-sass']);

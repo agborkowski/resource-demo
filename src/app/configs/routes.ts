@@ -5,7 +5,7 @@ angular
     .config([
         '$stateProvider',
         '$urlRouterProvider',
-        function ($stateProvider, $urlRouterProvider) {
+        function ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
 
             $stateProvider
                 .state('home', {
@@ -16,13 +16,13 @@ angular
 
                 .state('contact', {
                     url: '/contact',
-                    templateUrl: 'app/routes/contact/contact.html',
+                    templateUrl: '/app/routes/contact/contact.html',
                     controller: 'ContactCtrl'
                 })
 
                 .state('login', {
                     url: '/login',
-                    templateUrl: 'app/routes/login/login.html'
+                    templateUrl: '/app/routes/login/login.html'
                 });
 
             $urlRouterProvider.otherwise('/');

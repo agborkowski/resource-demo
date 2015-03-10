@@ -73,3 +73,16 @@ gulp.task('inject-scripts', function () {
         }))
         .pipe(gulp.dest('.tmp/'));
 });
+
+gulp.task('inject-css', function () {
+    return gulp.src('.tmp/index.html')
+        .pipe($.inject(gulp.src(['.tmp/styles/index.css'], {read: false}), {
+            transform: function (path) {
+                return '<link rel="stylesheet" href="' + path.replace('.tmp/', '/') + '" />';
+            },
+            starttag: '<!-- styles injector -->',
+            endtag: '<!-- end styles injector -->',
+            addRootSlash: false
+        }))
+        .pipe(gulp.dest('.tmp/'));
+});

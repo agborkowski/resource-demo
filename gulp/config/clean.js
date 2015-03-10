@@ -4,22 +4,15 @@ var gulp = require('gulp');
 var del = require('del');
 
 gulp.task('clean-project', function(done) {
-    del([
-        'app/js/{vendor,modules}/**',
-        '!app/js/{vendor,modules}',
-        '!app/js/{vendor,modules}/.gitignore',
-        'app/js/app.js',
-        'app/stylesheets/*.{css,map}'
-    ], done);
+    del(['.tmp/'], done);
 });
 
-gulp.task('clean-modules', function(done) {
-    del([
-        'app/js/modules/**',
-        '!app/js/modules',
-        '!app/js/modules/.gitignore',
-        'app/js/app.js'
-    ], done);
+gulp.task('clean-index', function(done) {
+    del(['.tmp/index.html'], done);
+});
+
+gulp.task('clean-ts', function(done) {
+    del(['.tmp/js/modules/'], done);
 });
 
 gulp.task('clean-coverage', function(done) {
@@ -27,7 +20,7 @@ gulp.task('clean-coverage', function(done) {
 });
 
 gulp.task('clean-css', function(done) {
-    del(['app/stylesheets/*.{css,map}'], done);
+    del(['.tmp/styles/'], done);
 });
 
 gulp.task('clean-bower', function (done) {

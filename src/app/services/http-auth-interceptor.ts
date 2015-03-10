@@ -1,6 +1,6 @@
 'use strict';
 angular
-    .module('app.main')
+    .module('app')
     .factory('httpAuthInterceptor', [
         '$q',
         '$async',

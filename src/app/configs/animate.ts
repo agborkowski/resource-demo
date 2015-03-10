@@ -1,6 +1,6 @@
 'use strict';
 angular
-    .module('app.main')
+    .module('app')
     .config(['$animateProvider', function ($animateProvider) {
         $animateProvider.classNameFilter(/^((?!(no-animate|x-no-animate)).)*$/);
     }]);

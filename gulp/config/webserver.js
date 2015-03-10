@@ -30,7 +30,7 @@ var webserver = require('gulp-webserver');
 //});
 
 gulp.task('webserver', function () {
-    return gulp.src('app').pipe(webserver({
+    return gulp.src('.tmp').pipe(webserver({
         //host: 'challenge-local.1-page.com',
         //port: 8443,
         //middleware: middleware,
