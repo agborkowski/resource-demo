@@ -1,14 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var requireDir = require('require-dir');
 var runSequence = require('run-sequence');
 
-
-requireDir('./gulp/');
-requireDir('./gulp/config/');
-requireDir('./gulp/register/');
-requireDir('./gulp/build/');
+require('require-dir')('./gulp/');
 
 /**
  * simply compile .sass => .css and .ts => .js
