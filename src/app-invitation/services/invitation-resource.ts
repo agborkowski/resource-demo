@@ -5,6 +5,8 @@ angular
     .factory('Invitation', [
         '$resource',
         function ($resource) {
-            return $resource('/invitation/:invitationId');
+            return $resource('/invitation/:invitationId', {
+                invitationId: '@id'
+            });
         }
     ]);
