@@ -33,4 +33,12 @@ gulp.task('copy-sass-bourbon', function () {
 
 gulp.task('copy-sass', ['copy-sass-modules', 'copy-sass-assets', 'copy-sass-bourbon']);
 
-gulp.task('copy', ['bower-copy', 'copy-favicon', 'copy-index', 'copy-sass']);
+gulp.task('copy-fonts', function () {
+    return gulp.src('src/assets/fonts/*').pipe($.copy('.tmp/fonts/', {prefix: 3}));
+});
+
+gulp.task('copy-images', function () {
+    return gulp.src('src/assets/images/*').pipe($.copy('.tmp/images/', {prefix: 3}));
+});
+
+gulp.task('copy', ['bower-copy', 'copy-favicon', 'copy-index', 'copy-sass', 'copy-fonts', 'copy-images']);

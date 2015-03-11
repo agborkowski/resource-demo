@@ -1,10 +1,14 @@
 'use strict';
 
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
 //var extend = require('extend');
 //var proxy = require('proxy-middleware');
 //var url = require('url');
+
+
+var $ = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'run-sequence']
+});
 
 //var middleware = [
 //    'account',
@@ -30,12 +34,13 @@ var webserver = require('gulp-webserver');
 //});
 
 gulp.task('webserver', function () {
-    return gulp.src('.tmp').pipe(webserver({
-        //host: 'challenge-local.1-page.com',
-        //port: 8443,
+    return gulp.src('.tmp').pipe($.webserver({
         //middleware: middleware,
         open: true,
-        //https: true,
         livereload: true
     }));
+});
+
+gulp.task('dev', function (done) {
+    $.runSequence('build', 'webserver', 'watch', done);
 });

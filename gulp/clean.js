@@ -19,6 +19,10 @@ gulp.task('clean-coverage', function(done) {
     del(['test/coverage'], done);
 });
 
+gulp.task('clean-sass', function(done) {
+    del(['.tmp/sass/'], done);
+});
+
 gulp.task('clean-css', function(done) {
     del(['.tmp/styles/'], done);
 });

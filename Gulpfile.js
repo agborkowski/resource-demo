@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+//var gulp = require('gulp');
+//var runSequence = require('run-sequence');
 
 require('require-dir')('./gulp/');
 
@@ -13,22 +13,22 @@ require('require-dir')('./gulp/');
 /**
  * run server, watch for changes and live reload
  */
-gulp.task('default', function () {
-    gulp.start('watch', 'webserver');
-});
+//gulp.task('default', function () {
+//    gulp.start('watch', 'webserver');
+//});
 
 /**
  * test with karma, lint and then run server with watch
  */
-gulp.task('dev', function (done) {
-    runSequence(
-        ['clean-css', 'clean-modules'],
-        ['sass', 'ts'],
-        'karma-ci',
-        ['watch', 'webserver'],
-        done
-    );
-});
+//gulp.task('dev', function (done) {
+//    runSequence(
+//        ['clean-css', 'clean-modules'],
+//        ['sass', 'ts'],
+//        'karma-ci',
+//        ['watch', 'webserver'],
+//        done
+//    );
+//});
 
 /**
  * download bower dependencies, uglify and concat some of them and move some files around (build)
@@ -56,6 +56,6 @@ gulp.task('dev', function (done) {
 /**
  * emulate jenkins
  */
-gulp.task('check', function (done) {
-    runSequence('clean-modules', ['sass-test', 'ts'], 'karma-ci-short', done);
-});
+//gulp.task('check', function (done) {
+//    runSequence('clean-modules', ['sass-test', 'ts'], 'karma-ci-short', done);
+//});
