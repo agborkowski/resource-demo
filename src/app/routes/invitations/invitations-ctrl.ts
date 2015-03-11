@@ -23,16 +23,7 @@ angular
                 },
 
                 add() {
-                    $scope.theInvitation = new Invitation({
-                        invitee: {
-                            firstName: null,
-                            lastName: null,
-                            email: null
-                        },
-                        status: {
-                            name: 'Created'
-                        }
-                    });
+                    $scope.theInvitation = Invitation.generate();
                 },
 
                 cancel() {

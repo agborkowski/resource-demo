@@ -19,6 +19,23 @@ angular
 
             });
 
+            angular.extend(Invitation, {
+
+                generate() {
+                    return new this({
+                        invitee: {
+                            firstName: null,
+                            lastName: null,
+                            email: null
+                        },
+                        status: {
+                            name: 'Created'
+                        }
+                    });
+                }
+
+            });
+
             return Invitation;
         }
     ]);
