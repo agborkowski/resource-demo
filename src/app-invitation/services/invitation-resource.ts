@@ -5,10 +5,20 @@ angular
     .factory('Invitation', [
         '$resource',
         function ($resource) {
-            return $resource('/invitation/:invitationId', {
+            var Invitation = $resource('/invitation/:invitationId', {
                 invitationId: '@id'
             }, {
                 update: {method: 'PUT'}
             });
+
+            angular.extend(Invitation.prototype, {
+
+                clone() {
+                    return new Invitation(angular.extend({}, this));
+                }
+
+            });
+
+            return Invitation;
         }
     ]);
