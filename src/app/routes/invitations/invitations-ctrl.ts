@@ -19,7 +19,7 @@ angular
                 },
 
                 edit(invitation) {
-                    $scope.theInvitation = new Invitation(angular.extend({}, invitation));
+                    $scope.theInvitation = invitation.clone();
                 },
 
                 add() {
