@@ -48,7 +48,7 @@
         </tbody>
     </table>
     <footer class="panel-footer text-right">
-        <button ng-click="invitationsCtrl.add()" type="button" class="btn btn-default">add new</button>
+        <button ng-click="invitationsCtrl.edit()" type="button" class="btn btn-default">add new</button>
     </footer>
 </div>
 
@@ -58,7 +58,7 @@
             <header class="panel-heading">
                 add new invitation
             </header>
-            <form name="invitationForm" class="panel-body">
+            <form ng-submit="invitationsCtrl.save()" name="invitationForm" class="panel-body">
                 <div
                     ng-class="{
                         'has-error': invitationForm.firstName.$invalid && invitationForm.firstName.$dirty,
@@ -68,7 +68,7 @@
                     <label class="control-label" for="x-firstName">First Name</label>
                     <input
                         ng-model="theInvitation.invitee.firstName"
-                        class="form-control"
+                        class="form-control input-lg"
                         id="x-firstName"
                         name="firstName"
                         required="required"
@@ -83,7 +83,7 @@
                     <label class="control-label" for="x-lastName">Last Name</label>
                     <input
                         ng-model="theInvitation.invitee.lastName"
-                        class="form-control"
+                        class="form-control input-lg"
                         id="x-lastName"
                         name="lastName"
                         required="required"
@@ -98,7 +98,7 @@
                     <label class="control-label" for="x-email">Email</label>
                     <input
                         ng-model="theInvitation.invitee.email"
-                        class="form-control"
+                        class="form-control input-lg"
                         id="x-email"
                         name="email"
                         required="required"
@@ -109,28 +109,15 @@
                     <input
                         ng-model="theInvitation.status.name"
                         ng-readonly="true"
-                        class="form-control"
+                        class="form-control input-lg"
                         id="x-status"
                         name="status"
                         type="text" />
                 </div>
                 <div class="form-group text-right">
                     <button ng-click="invitationsCtrl.cancel()" type="button" class="btn btn-link">cancel</button>
-                    <button
-                        ng-click="invitationsCtrl.save()"
-                        ng-disabled="invitationForm.$invalid"
-                        ng-if="!theInvitation.id"
-                        class="btn btn-success"
-                        type="button">
+                    <button ng-disabled="invitationForm.$invalid" class="btn btn-success" type="submit">
                         save
-                    </button>
-                    <button
-                        ng-click="invitationsCtrl.update()"
-                        ng-disabled="invitationForm.$invalid"
-                        ng-if="theInvitation.id"
-                        class="btn btn-success"
-                        type="button">
-                        update
                     </button>
                 </div>
             </form>

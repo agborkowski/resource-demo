@@ -9,6 +9,14 @@ angular
 
             angular.extend(this, {
 
+                cancel() {
+                    $scope.theInvitation = null;
+                },
+
+                edit(invitation?) {
+                    $scope.theInvitation = Invitation.generate(invitation);
+                },
+
                 reload() {
                     $scope.invitations = Invitation.query();
                     this.cancel();
@@ -18,24 +26,8 @@ angular
                     invitation.$delete().then(() => this.reload());
                 },
 
-                edit(invitation) {
-                    $scope.theInvitation = invitation.clone();
-                },
-
-                add() {
-                    $scope.theInvitation = Invitation.generate();
-                },
-
-                cancel() {
-                    $scope.theInvitation = null;
-                },
-
                 save() {
-                    $scope.theInvitation.$save().then(() => this.reload());
-                },
-
-                update() {
-                    $scope.theInvitation.$update().then(() => this.reload());
+                    $scope.theInvitation.upsert().then(() => this.reload());
                 }
 
             }).reload();
