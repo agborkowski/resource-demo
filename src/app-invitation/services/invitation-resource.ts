@@ -5,7 +5,7 @@ angular
     .factory('Invitation', [
         '$resource',
         function ($resource) {
-            var Invitation = $resource('/invitation/:invitationId', {
+            var Invitation: any = $resource('/invitation/:invitationId', {
                 invitationId: '@id'
             }, {
                 update: {method: 'PUT'}
@@ -15,23 +15,22 @@ angular
 
                 clone() {
                     return new Invitation(angular.extend({}, this));
+                },
+
+                upsert() {
+                    return this.id ? this.$update() : this.$save();
                 }
 
             });
 
             angular.extend(Invitation, {
 
-                generate() {
-                    return new this({
-                        invitee: {
-                            firstName: null,
-                            lastName: null,
-                            email: null
-                        },
-                        status: {
-                            name: 'Created'
-                        }
-                    });
+                plainNewModel() {
+                    return {invitee: {firstName: null, lastName: null, email: null}, status: {name: 'Created'}};
+                },
+
+                generate(invitation?) {
+                    return invitation ? invitation.clone() : new this(this.plainNewModel());
                 }
 
             });
