@@ -1,10 +1,13 @@
 <div class="container-fluid">
-    <div class="navbar-header">
+    <header class="navbar-header">
         <a class="navbar-brand" ui-sref="home">App</a>
-    </div>
+    </header>
     <ul class="nav navbar-nav">
         <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
         <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+        <li ng-class="{active:('invitation' | isState) || ('invitations' | isState)}">
+            <a ui-sref="invitations">Invitations</a>
+        </li>
         <li ui-sref-active="active"><a ui-sref="login">Login</a></li>
     </ul>
 </div>

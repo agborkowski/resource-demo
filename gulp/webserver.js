@@ -1,41 +1,26 @@
 'use strict';
 
 var gulp = require('gulp');
-//var extend = require('extend');
-//var proxy = require('proxy-middleware');
-//var url = require('url');
-
+var extend = require('extend');
+var proxy = require('proxy-middleware');
+var url = require('url');
 
 var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'run-sequence']
 });
 
-//var middleware = [
-//    'account',
-//    'acl',
-//    'challenge',
-//    'communication',
-//    'country',
-//    'csv',
-//    'file',
-//    'group',
-//    'plan',
-//    'proposal-schema',
-//    'proposal',
-//    'score',
-//    'subscription',
-//    'user'
-//].map(function (path) {
-//    return proxy(extend(url.parse('https://challenge-test.1-page.com:443/' + path), {
-//        route: '/' + path
-//    }));
-//}).concat(function (req, resp, next) {
-//    return req.url === '/config' ? resp.end(JSON.stringify(localConfig)) : next();
-//});
+var middleware = [
+    'invitation',
+    'event'
+].map(function (path) {
+    return proxy(extend(url.parse('http://localhost:1337/' + path), {
+        route: '/' + path
+    }));
+});
 
 gulp.task('webserver', function () {
     return gulp.src('.tmp').pipe($.webserver({
-        //middleware: middleware,
+        middleware: middleware,
         open: true,
         livereload: true
     }));

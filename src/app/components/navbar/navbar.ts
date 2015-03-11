@@ -10,7 +10,7 @@ angular
         return {
             controller: 'NavbarCtrl as navbarCtrl',
             templateUrl(tElement) {
-                tElement.addClass('navbar navbar-default').attr('role', 'navigation');
+                tElement.addClass('navbar navbar-inverse').attr('role', 'navigation');
                 return '/app/components/navbar/navbar.html'
             }
         };
