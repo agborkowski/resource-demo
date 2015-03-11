@@ -7,7 +7,17 @@ angular
         'Invitation',
         function ($scope, Invitation) {
 
-            $scope.invitations = Invitation.query();
+            angular.extend(this, {
+
+                reload() {
+                    $scope.invitations = Invitation.query();
+                },
+
+                remove(invitation) {
+                    invitation.$delete().then(() => this.reload());
+                }
+
+            }).reload();
 
         }
     ]);
