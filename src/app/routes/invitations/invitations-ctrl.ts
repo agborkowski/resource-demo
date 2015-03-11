@@ -4,7 +4,10 @@ angular
     .module('app')
     .controller('InvitationsCtrl', [
         '$scope',
-        function ($scope) {
-            $scope.name = 'InvitationsCtrl';
+        'Invitation',
+        function ($scope, Invitation) {
+
+            $scope.invitations = Invitation.query();
+
         }
     ]);
