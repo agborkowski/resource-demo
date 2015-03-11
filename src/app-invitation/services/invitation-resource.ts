@@ -7,6 +7,8 @@ angular
         function ($resource) {
             return $resource('/invitation/:invitationId', {
                 invitationId: '@id'
+            }, {
+                update: {method: 'PUT'}
             });
         }
     ]);
