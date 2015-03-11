@@ -5,7 +5,8 @@ angular
     .controller('InvitationCtrl', [
         '$scope',
         '$state',
-        function ($scope, $state) {
-            $scope.invitation = $state.params.invitationId;
+        'Invitation',
+        function ($scope, $state, Invitation) {
+            $scope.invitation = Invitation.get({invitationId: $state.params.invitationId});
         }
     ]);
