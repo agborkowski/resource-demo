@@ -6,5 +6,7 @@ angular.module('app', [
 
     'ui.router',
 
-    'triNgAsync'
+    'triNgAsync',
+
+    'app.invitation'
 ]);

@@ -1,0 +1,145 @@
+<header>
+    <h1>Invitations</h1>
+</header>
+
+<div class="panel panel-primary">
+    <header class="panel-heading">
+        invitations list
+    </header>
+    <table class="table table-striped" ng-if="invitations.length">
+        <tbody>
+        <tr ng-repeat="invitation in invitations">
+            <td>
+                <a ui-sref="invitation({invitationId: invitation.id})">
+                    {{ invitation.id }}
+                </a>
+            </td>
+            <td>
+                <a ui-sref="invitation({invitationId: invitation.id})">
+                    {{ invitation.invitee.firstName }}
+                </a>
+            </td>
+            <td>
+                <a ui-sref="invitation({invitationId: invitation.id})">
+                    {{ invitation.invitee.lastName }}
+                </a>
+            </td>
+            <td>
+                <a ui-sref="invitation({invitationId: invitation.id})">
+                    {{ invitation.invitee.email }}
+                </a>
+            </td>
+            <td>
+                <a ui-sref="invitation({invitationId: invitation.id})">
+                    {{ invitation.status.name }}
+                </a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="invitationsCtrl.edit(invitation)">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="invitationsCtrl.remove(invitation)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <footer class="panel-footer text-right">
+        <button ng-click="invitationsCtrl.add()" type="button" class="btn btn-default">add new</button>
+    </footer>
+</div>
+
+<div class="row" ng-if="theInvitation">
+    <div class="col-md-7">
+        <div class="panel panel-primary">
+            <header class="panel-heading">
+                add new invitation
+            </header>
+            <form name="invitationForm" class="panel-body">
+                <div
+                    ng-class="{
+                        'has-error': invitationForm.firstName.$invalid && invitationForm.firstName.$dirty,
+                        'has-success': invitationForm.firstName.$valid && invitationForm.firstName.$dirty
+                    }"
+                    class="form-group">
+                    <label class="control-label" for="x-firstName">First Name</label>
+                    <input
+                        ng-model="theInvitation.invitee.firstName"
+                        class="form-control"
+                        id="x-firstName"
+                        name="firstName"
+                        required="required"
+                        type="text" />
+                </div>
+                <div
+                    ng-class="{
+                        'has-error': invitationForm.lastName.$invalid && invitationForm.lastName.$dirty,
+                        'has-success': invitationForm.lastName.$valid && invitationForm.lastName.$dirty
+                    }"
+                    class="form-group">
+                    <label class="control-label" for="x-lastName">Last Name</label>
+                    <input
+                        ng-model="theInvitation.invitee.lastName"
+                        class="form-control"
+                        id="x-lastName"
+                        name="lastName"
+                        required="required"
+                        type="text"/>
+                </div>
+                <div
+                    ng-class="{
+                        'has-error': invitationForm.email.$invalid && invitationForm.email.$dirty,
+                        'has-success': invitationForm.email.$valid && invitationForm.email.$dirty
+                    }"
+                    class="form-group">
+                    <label class="control-label" for="x-email">Email</label>
+                    <input
+                        ng-model="theInvitation.invitee.email"
+                        class="form-control"
+                        id="x-email"
+                        name="email"
+                        required="required"
+                        type="email" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="x-status">Status</label>
+                    <input
+                        ng-model="theInvitation.status.name"
+                        ng-readonly="true"
+                        class="form-control"
+                        id="x-status"
+                        name="status"
+                        type="text" />
+                </div>
+                <div class="form-group text-right">
+                    <button ng-click="invitationsCtrl.cancel()" type="button" class="btn btn-link">cancel</button>
+                    <button
+                        ng-click="invitationsCtrl.save()"
+                        ng-disabled="invitationForm.$invalid"
+                        ng-if="!theInvitation.id"
+                        class="btn btn-success"
+                        type="button">
+                        save
+                    </button>
+                    <button
+                        ng-click="invitationsCtrl.update()"
+                        ng-disabled="invitationForm.$invalid"
+                        ng-if="theInvitation.id"
+                        class="btn btn-success"
+                        type="button">
+                        update
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <pre>theInvitation: {{ theInvitation | json }}</pre>
+    </div>
+</div>
+
+<pre>invitations: {{ invitations | json }}</pre>
