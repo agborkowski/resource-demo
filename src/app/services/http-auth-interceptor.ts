@@ -7,11 +7,9 @@ angular
         '$rootScope',
         function ($q: ng.IQService, $async: tri.IAsyncService, $rootScope: ng.IRootScopeService) {
             return {
-                responseError: function (rejection) {
+                responseError(rejection: ng.IHttpPromiseCallbackArg<any>): ng.IPromise<any> {
                     if (rejection.status === 401) {
-                        $async(function () {
-                            $rootScope.$emit('$opLoggedOut');
-                        });
+                        $async(() => $rootScope.$emit('$opLoggedOut'));
                     }
                     return $q.reject(rejection);
                 }

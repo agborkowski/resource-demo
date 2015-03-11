@@ -3,7 +3,7 @@ logs
 *.log
 
 # Coverage directory used by tools like istanbul
-test/coverage
+coverage/
 
 # Dependency directory
 node_modules
