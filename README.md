@@ -1,7 +1,7 @@
 $resource DEMO
 =========================
 
-AngularJS $resource usage demofor presentation at ngPoznan #10
+AngularJS $resource usage demo for presentation at ngPoznan #10
 
 ***
 
@@ -13,25 +13,46 @@ installed `node`, `npm` and `gulp` npm module.
 
 To set up project run from `src/` directory :
  - `npm install`
- - `gulp prepare`
+ - `gulp bower`
 
 ***
 
-SASS AND JS HINT
-----------------
+SETTING UP
+----------
 
-From `src/` directory in project:
- - run `gulp check` for CI *tslint* and *karma* unit tests
- - run `gulp karma-tdd` to run *karma* unit tests with watch
- - run `gulp sass` to build CSS files
+From project's root directory:
+ - run `gulp dev` to build app and serve it with live reload
+ - run `gulp build` to build it without serving
 
 ***
 
-SERVER
-------
+API
+---
 
-From `src/` directory in project
+To proceed with demo, you need working API (best on localhost:1337) with *Invitation* endpoint CRUD:
 
-- run `gulp` to serve, watch sass files for changes and live-reload on changes
-- run `gulp webserver` to serve and live-reload
-- run `gulp dev` (same as `gulp`, but also runs single test initially)
+```
+GET     /invitation
+GET     /invitation/:id
+POST    /invitation
+PUT     /invitation/:id
+DELETE  /invitation:/id
+```
+
+Invitation entity is:
+
+```
+{
+
+    invitee: {
+        firstName: string;
+        lastName: string;
+        email: string;
+    };
+
+    status: {
+        name: string;
+    };
+
+}
+```
